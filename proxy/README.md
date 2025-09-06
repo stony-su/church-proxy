@@ -13,3 +13,9 @@ Endpoints
 - GET /set-trend/:dir  -> dir = up|down|flat
 - POST /push          -> body { temperature?: number }
 - GET /health         -> status info
+
+Notes
+- Local proxy default: http://localhost:4000/
+- Dashboard hosted at: https://church-proxy.vercel.app/
+
+If your dashboard is hosted elsewhere, set the dashboard origin in `VITE_ALLOWED_ORIGINS` (comma-separated) or update the dashboard's `VITE_PROXY_URL`.

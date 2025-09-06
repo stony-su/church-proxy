@@ -17,6 +17,10 @@ Proxy server (simulated temperature feed)
 
 The proxy exposes endpoints to set trend and push temperature documents to Firestore.
 
+Defaults used by this project:
+- Proxy: http://localhost:4000/
+- Hosted dashboard: https://church-proxy.vercel.app/
+
 Firebase
 
 Expect a Firestore collection (default `temperatures`) with documents shaped:
