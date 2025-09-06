@@ -18,9 +18,10 @@ export default function CalendarHeatmapPanel({ data }: { data: any[] }) {
   const classForValue = (value:any) => {
     if (!value) return 'color-empty'
     const t = value.count
-    if (t < 28) return 'color-scale-1'
-    if (t < 32) return 'color-scale-2'
-    return 'color-scale-3'
+  // use the class names defined by react-calendar-heatmap's default stylesheet
+  if (t < 28) return 'color-github-1'
+  if (t < 32) return 'color-github-2'
+  return 'color-github-3'
   }
 
   return (
@@ -31,7 +32,7 @@ export default function CalendarHeatmapPanel({ data }: { data: any[] }) {
         endDate={new Date()}
         values={values}
         classForValue={classForValue}
-        tooltipDataAttrs={value => ({ 'data-tip': `${value.date}: ${value.count}°C` })}
+  tooltipDataAttrs={(value: any) => value ? ({ 'data-tip': `${value.date}: ${value.count}°C` }) : ({})}
       />
     </div>
   )

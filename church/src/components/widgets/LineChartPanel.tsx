@@ -42,9 +42,14 @@ export default function LineChartPanel({ data }: { data: any[] }) {
               tickFormatter={(v:any) => String(Math.round(Number(v)))}
               label={{ value: `Temperature (${UNIT})`, angle: -90, position: 'insideLeft', dy: 40 }}
             />
-            <Tooltip labelFormatter={(t:any) => format(new Date(t), 'PPpp')} />
-            <Area dataKey="temp" fill="rgba(6,182,212,0.12)" stroke="none" />
-            <Line type="monotone" dataKey="temp" stroke="#06b6d4" dot={false} />
+            <Tooltip
+              labelFormatter={(t:any) => format(new Date(t), 'PPpp')}
+              contentStyle={{ backgroundColor: 'rgba(2,6,23,0.95)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 6, padding: 8 }}
+              itemStyle={{ color: '#e6eef8' }}
+              labelStyle={{ color: '#94a3b8' }}
+            />
+            <Area dataKey="temp" fill="rgba(6,182,212,0.32)" stroke="none" />
+            <Line type="monotone" dataKey="temp" stroke="#06b6d4" strokeWidth={2} dot={false} />
           </LineChart>
         </ResponsiveContainer>
       </div>
