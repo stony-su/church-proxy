@@ -9,7 +9,7 @@ import ComparisonPanel from './widgets/ComparisonPanel'
 
 export default function Dashboard() {
   const [data, setData] = useState<any[]>([])
-  const [proxyUrl, setProxyUrl] = useState<string>(() => import.meta.env.VITE_PROXY_URL || 'http://localhost:4000')
+  const [proxyUrl, setProxyUrl] = useState<string>(() => import.meta.env.VITE_PROXY_URL || 'https://church-proxy-git-main-stony-sus-projects.vercel.app/')
   const [trendState, setTrendState] = useState<number>(0)
   const [alerts, setAlerts] = useState<any[]>([])
   const [threshold, setThreshold] = useState<number>(() => Number(import.meta.env.VITE_ALERT_THRESHOLD || '18'))
